@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "alcohol_industry:block/alcohol_boiler_side",
+    "down": "alcohol_industry:block/alcohol_boiler_bottom",
+    "up": "alcohol_industry:block/alcohol_boiler_top",
+    "north": "alcohol_industry:block/alcohol_boiler_front",
+    "south": "alcohol_industry:block/alcohol_boiler_side",
+    "west": "alcohol_industry:block/alcohol_boiler_side",
+    "east": "alcohol_industry:block/alcohol_boiler_side"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "alcohol_industry:block/alcohol_boiler"
+    },
+    "facing=south": {
+      "model": "alcohol_industry:block/alcohol_boiler",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "alcohol_industry:block/alcohol_boiler",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "alcohol_industry:block/alcohol_boiler",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GTG",
+    "TFT",
+    "CCC"
+  ],
+  "key": {
+    "G": {
+      "item": "alcohol_industry:glass_tube"
+    },
+    "T": {
+      "item": "alcohol_industry:temperature_controller"
+    },
+    "F": {
+      "item": "create:fluid_tank"
+    },
+    "C": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "result": {
+    "id": "alcohol_industry:alcohol_boiler",
+    "count": 1
+  }
+}

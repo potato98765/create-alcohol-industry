@@ -1,0 +1,41 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "fluid": "minecraft:water",
+      "amount": 1000,
+      "type": "neoforge:single"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+	{
+      "item": "minecraft:sugar"
+    },
+	{
+      "item": "minecraft:sugar"
+    },
+	{
+      "item": "minecraft:sugar"
+    },
+	{
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+	{
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:fermented_spider_eye"
+    }
+  ],
+  "results": [
+    {
+      "amount": 750,
+      "id": "alcohol_industry:alcohol_base_fluid"
+    }
+  ]
+}

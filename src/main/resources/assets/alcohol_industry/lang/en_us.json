@@ -1,0 +1,33 @@
+{
+  "itemGroup.alcohol_industry": "Alcohol Industry",
+
+  "block.alcohol_industry.alcohol_boiler": "Alcohol Boiler",
+  
+  "item.alcohol_industry.glass_tube": "Glass Tube",
+  "item.alcohol_industry.temperature_controller": "Temperature Controller",
+  
+  "fluid_type.alcohol_industry.alcohol_base_fluid": "Alcohol Base",
+  "item.alcohol_industry.alcohol_base_bucket": "Alcohol Base Bucket",
+  "item.alcohol_industry.alcohol_base": "Bottle of Alcohol Base",
+  "block.alcohol_industry.alcohol_base_fluid_block": "Alcohol Base",
+
+  "fluid_type.alcohol_industry.beer": "Beer",
+  "item.alcohol_industry.beer_bucket": "Beer Bucket",
+  "item.alcohol_industry.beer": "Bottle of Beer",
+  "block.alcohol_industry.beer_block": "Beer",
+
+  "fluid_type.alcohol_industry.vodka": "Vodka",
+  "item.alcohol_industry.vodka_bucket": "Vodka Bucket",
+  "item.alcohol_industry.vodka": "Bottle of Vodka",
+  "block.alcohol_industry.vodka_block": "Vodka",
+
+  "fluid_type.alcohol_industry.whiskey": "Whiskey",
+  "item.alcohol_industry.whiskey_bucket": "Whiskey Bucket",
+  "item.alcohol_industry.whiskey": "Bottle of Whiskey",
+  "block.alcohol_industry.whiskey_block": "Whiskey",
+
+  "fluid_type.alcohol_industry.tequila": "Tequila",
+  "item.alcohol_industry.tequila_bucket": "Tequila Bucket",
+  "item.alcohol_industry.tequila": "Bottle of Tequila",
+  "block.alcohol_industry.tequila_block": "Tequila"
+}

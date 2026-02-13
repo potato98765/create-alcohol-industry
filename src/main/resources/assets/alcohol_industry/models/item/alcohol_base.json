@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "alcohol_industry:item/bottle_base",
+    "layer1": "alcohol_industry:item/alcohol_base_liquid"
+  }
+}
