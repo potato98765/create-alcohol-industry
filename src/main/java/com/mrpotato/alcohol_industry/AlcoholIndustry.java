@@ -21,7 +21,6 @@ public class AlcoholIndustry {
     public AlcoholIndustry(IEventBus modEventBus) {
         LOGGER.info("Initializing Alcohol Industry mod...");
 
-        // Registries
         ModFluidTypes.FLUID_TYPES.register(modEventBus);
         ModFluids.FLUIDS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
@@ -30,7 +29,6 @@ public class AlcoholIndustry {
         ModRecipeTypes.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 
-        // ✅ Capability registration (CORRECT way)
         modEventBus.addListener(this::registerCaps);
 
         LOGGER.info("Alcohol Industry mod initialized successfully!");
