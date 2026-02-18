@@ -25,7 +25,6 @@ public class ModItems {
             .food(new FoodProperties.Builder().nutrition(0).saturationModifier(0.0F).alwaysEdible().build());
     }
 
-    // Fluid Buckets
     public static final DeferredHolder<Item, BucketItem> ALCOHOL_BASE_BUCKET = 
         ITEMS.register("alcohol_base_bucket", () -> new BucketItem(ModFluids.ALCOHOL_BASE_SOURCE.get(), bucketProps()));
 
@@ -41,7 +40,8 @@ public class ModItems {
     public static final DeferredHolder<Item, BucketItem> TEQUILA_BUCKET = 
         ITEMS.register("tequila_bucket", () -> new BucketItem(ModFluids.TEQUILA_SOURCE.get(), bucketProps()));
 
-    // Drinkable Bottles
+
+    
     public static final DeferredHolder<Item, AlcoholBottleItem> ALCOHOL_BASE_BOTTLE =
         ITEMS.register("alcohol_base", () -> new AlcoholBottleItem(bottleProps()));
 
@@ -57,14 +57,16 @@ public class ModItems {
     public static final DeferredHolder<Item, AlcoholBottleItem> TEQUILA_BOTTLE =
         ITEMS.register("tequila", () -> new AlcoholBottleItem(bottleProps()));
         
-    // Component Items
+
+    
     public static final DeferredHolder<Item, Item> GLASS_TUBE = 
         ITEMS.register("glass_tube", () -> new Item(new Item.Properties()));
 
     public static final DeferredHolder<Item, Item> TEMPERATURE_CONTROLLER = 
         ITEMS.register("temperature_controller", () -> new Item(new Item.Properties()));
     
-    // Block Items
+
+    
     public static final DeferredHolder<Item, BlockItem> ALCOHOL_BOILER_ITEM =
         ITEMS.register("alcohol_boiler", () -> new BlockItem(ModBlocks.ALCOHOL_BOILER.get(), 
             new Item.Properties()));
