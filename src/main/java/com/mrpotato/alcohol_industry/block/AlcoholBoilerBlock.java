@@ -61,7 +61,6 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
         
         AlcoholBoilerBlockEntity be = getBlockEntity(level, pos);
         if (be != null) {
-            // Handle item insertion like a basin
             if (!stack.isEmpty()) {
                 ItemStack remainder = be.insertItem(stack.copy());
                 if (remainder.getCount() < stack.getCount()) {
@@ -87,7 +86,6 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
         super.onRemove(state, level, pos, newState, isMoving);
     }
     
-    // ========== CRITICAL: TICKER IMPLEMENTATION ==========
     
     @Nullable
     @Override
@@ -99,7 +97,7 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
         if (level.isClientSide) {
-            return null; // No client-side ticking needed
+            return null;
         }
         
         return createTickerHelper(type, ModBlockEntities.ALCOHOL_BOILER.get(), 
@@ -113,7 +111,6 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
     }
     
-    // ========== IBE IMPLEMENTATION ==========
     
     @Override
     public Class<AlcoholBoilerBlockEntity> getBlockEntityClass() {
