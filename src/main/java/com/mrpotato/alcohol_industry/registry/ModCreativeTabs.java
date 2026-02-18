@@ -17,21 +17,17 @@ public class ModCreativeTabs {
             .title(Component.translatable("itemGroup.alcohol_industry"))
             .icon(() -> new ItemStack(ModItems.ALCOHOL_BOILER_ITEM.get()))
             .displayItems((parameters, output) -> {
-                // Machinery
                 output.accept(ModItems.ALCOHOL_BOILER_ITEM.get());
                 
-                // Components
                 output.accept(ModItems.GLASS_TUBE.get());
                 output.accept(ModItems.TEMPERATURE_CONTROLLER.get());
                 
-                // Fluid Buckets
                 output.accept(ModItems.ALCOHOL_BASE_BUCKET.get());
                 output.accept(ModItems.BEER_BUCKET.get());
                 output.accept(ModItems.VODKA_BUCKET.get());
                 output.accept(ModItems.WHISKEY_BUCKET.get());
                 output.accept(ModItems.TEQUILA_BUCKET.get());
 
-                // Drinkable Bottles
                 output.accept(ModItems.ALCOHOL_BASE_BOTTLE.get());
                 output.accept(ModItems.BEER_BOTTLE.get());
                 output.accept(ModItems.VODKA_BOTTLE.get());
