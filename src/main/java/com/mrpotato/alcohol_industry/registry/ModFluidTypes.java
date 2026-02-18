@@ -11,7 +11,6 @@ public class ModFluidTypes {
     public static final DeferredRegister<FluidType> FLUID_TYPES = 
         DeferredRegister.create(NeoForgeRegistries.FLUID_TYPES, AlcoholIndustry.MOD_ID);
     
-    // Format: name, tintColor, density, viscosity, temperature
     public static final DeferredHolder<FluidType, GenericAlcoholFluidType> ALCOHOL_BASE_FLUID_TYPE = 
         FLUID_TYPES.register("alcohol_base_fluid", 
             () -> new GenericAlcoholFluidType("alcohol_base", 0xFFF5F5F5, 900, 1200, 300));
