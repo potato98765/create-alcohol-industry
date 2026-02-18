@@ -26,7 +26,6 @@ public class ModBlocks {
                 .liquid();
     }
 
-    // Fluid Blocks
     public static final DeferredHolder<Block, LiquidBlock> ALCOHOL_BASE_BLOCK = 
         BLOCKS.register("alcohol_base_fluid_block", () -> new LiquidBlock(ModFluids.ALCOHOL_BASE_SOURCE.get(), liquidProps()));
 
@@ -41,8 +40,8 @@ public class ModBlocks {
 
     public static final DeferredHolder<Block, LiquidBlock> TEQUILA_BLOCK = 
         BLOCKS.register("tequila_block", () -> new LiquidBlock(ModFluids.TEQUILA_SOURCE.get(), liquidProps()));
+
     
-    // Alcohol Boiler Block
     public static final DeferredHolder<Block, AlcoholBoilerBlock> ALCOHOL_BOILER =
         BLOCKS.register("alcohol_boiler", () -> new AlcoholBoilerBlock(
             BlockBehaviour.Properties.of()
