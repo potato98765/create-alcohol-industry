@@ -160,3 +160,4 @@ public class AlcoholBoilingRecipe implements Recipe<RecipeInput> {
         }
     }
 }
+
