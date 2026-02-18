@@ -118,7 +118,6 @@ public class AlcoholBoilerBlockEntity extends SmartBlockEntity {
 
         FluidStack fluid = inputTank.getFluid();
 
-        // DIAGNOSTIC: Check if any recipes exist
         var allRecipes = level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.ALCOHOL_BOILING.getType());
         
         if (level.getGameTime() % 100 == 0) {
@@ -129,7 +128,6 @@ public class AlcoholBoilerBlockEntity extends SmartBlockEntity {
             return;
         }
 
-        // Try to match each recipe
         int recipeIndex = 0;
         for (RecipeHolder<?> holder : allRecipes) {
             recipeIndex++;
