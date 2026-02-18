@@ -64,12 +64,10 @@ public class AlcoholBoilingRecipe implements Recipe<RecipeInput> {
     }
     
     public void consumeIngredients(ItemStackHandler inventory, net.neoforged.neoforge.fluids.capability.templates.FluidTank fluidTank) {
-        // Consume fluid
         if (!fluidIngredient.isEmpty()) {
             fluidTank.drain(fluidIngredient.getAmount(), IFluidHandler.FluidAction.EXECUTE);
         }
         
-        // Consume items
         List<Ingredient> remaining = new java.util.ArrayList<>(ingredients);
         for (int i = 0; i < inventory.getSlots(); i++) {
             ItemStack stack = inventory.getStackInSlot(i);
@@ -95,7 +93,6 @@ public class AlcoholBoilingRecipe implements Recipe<RecipeInput> {
     
     @Override
     public boolean matches(RecipeInput input, Level level) {
-        // Not used for our custom matching
         return false;
     }
     
@@ -124,7 +121,6 @@ public class AlcoholBoilingRecipe implements Recipe<RecipeInput> {
         return ModRecipeTypes.ALCOHOL_BOILING.getType();
     }
     
-    // Serializer
     public static class Serializer implements RecipeSerializer<AlcoholBoilingRecipe> {
         
         private static final MapCodec<AlcoholBoilingRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
