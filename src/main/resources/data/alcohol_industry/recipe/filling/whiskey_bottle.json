@@ -6,12 +6,13 @@
     },
     {
       "fluid": "alcohol_industry:whiskey",
-      "amount": 100
+      "amount": 250,
+      "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "item": "alcohol_industry:whiskey"
+      "id": "alcohol_industry:whiskey"
     }
   ]
 }

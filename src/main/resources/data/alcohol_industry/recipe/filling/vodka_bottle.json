@@ -6,12 +6,13 @@
     },
     {
       "fluid": "alcohol_industry:vodka",
-      "amount": 100
+      "amount": 250,
+      "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "item": "alcohol_industry:vodka"
+      "id": "alcohol_industry:vodka"
     }
   ]
 }

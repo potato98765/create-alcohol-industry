@@ -6,12 +6,13 @@
     },
     {
       "fluid": "alcohol_industry:tequila",
-      "amount": 100
+      "amount": 250,
+      "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "item": "alcohol_industry:tequila"
+      "id": "alcohol_industry:tequila"
     }
   ]
 }
