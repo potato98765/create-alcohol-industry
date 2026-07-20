@@ -6,12 +6,13 @@
     },
     {
       "fluid": "alcohol_industry:cider",
-      "amount": 250
+      "amount": 250,
+      "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "item": "alcohol_industry:cider"
+      "id": "alcohol_industry:cider"
     }
   ]
 }

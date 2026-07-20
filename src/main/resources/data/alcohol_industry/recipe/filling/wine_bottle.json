@@ -6,12 +6,13 @@
     },
     {
       "fluid": "alcohol_industry:wine",
-      "amount": 250
+      "amount": 250,
+      "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "item": "alcohol_industry:wine"
+      "id": "alcohol_industry:wine"
     }
   ]
 }
