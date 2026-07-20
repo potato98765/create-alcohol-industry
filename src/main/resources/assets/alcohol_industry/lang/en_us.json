@@ -38,6 +38,53 @@
   "alcohol_industry.goggles.alcohol_boiler.processing": "Processing:",
   "alcohol_industry.goggles.alcohol_boiler.heat": "Heat Level:",
 
+  "fluid_type.alcohol_industry.apple_juice": "Apple Juice",
+  "item.alcohol_industry.apple_juice_bucket": "Apple Juice Bucket",
+  "block.alcohol_industry.apple_juice_block": "Apple Juice",
+
+  "fluid_type.alcohol_industry.fermented_apple_juice": "Fermented Apple Juice",
+  "item.alcohol_industry.fermented_apple_juice_bucket": "Fermented Apple Juice Bucket",
+  "block.alcohol_industry.fermented_apple_juice_block": "Fermented Apple Juice",
+
+  "fluid_type.alcohol_industry.rum": "Rum",
+  "item.alcohol_industry.rum_bucket": "Rum Bucket",
+  "item.alcohol_industry.rum": "Bottle of Rum",
+  "block.alcohol_industry.rum_block": "Rum",
+
+
+  "fluid_type.alcohol_industry.cider": "Cider",
+  "item.alcohol_industry.cider_bucket": "Cider Bucket",
+  "item.alcohol_industry.cider": "Bottle of Cider",
+  "block.alcohol_industry.cider_block": "Cider",
+
+  "block.alcohol_industry.fermentation_barrel": "Fermentation Barrel",
+  "item.alcohol_industry.fermentation_barrel": "Fermentation Barrel",
+
+  "alcohol_industry.goggles.fermentation_barrel": "Fermentation Barrel Info:",
+  "alcohol_industry.goggles.fermentation_barrel.contents": "Contents:",
+  "alcohol_industry.goggles.fermentation_barrel.fermenting": "Fermenting:",
+  "alcohol_industry.goggles.fermentation_barrel.empty": "Empty",
+
   "alcohol_industry.jei.alcohol_boiling": "Alcohol Boiling",
-  "alcohol_industry.jei.alcohol_boiling.info": "Heat requirement: %s"
+  "alcohol_industry.jei.alcohol_boiling.info": "Heat requirement: %s",
+
+  "fluid_type.alcohol_industry.apple_wine": "Apple Wine",
+  "item.alcohol_industry.apple_wine_bucket": "Apple Wine Bucket",
+  "item.alcohol_industry.apple_wine": "Bottle of Apple Wine",
+  "block.alcohol_industry.apple_wine_block": "Apple Wine",
+
+  "alcohol_industry.goggles.fermentation_barrel.stage1": "→ Fermented Apple Juice",
+  "alcohol_industry.goggles.fermentation_barrel.stage2": "→ Apple Wine",
+
+  "alcohol_industry.jei.fermentation": "Fermentation Barrel",
+
+  "block.alcohol_industry.juice_press": "Juice Press",
+  "item.alcohol_industry.juice_press": "Juice Press",
+
+  "alcohol_industry.goggles.juice_press": "Juice Press Info:",
+  "alcohol_industry.goggles.juice_press.input": "Input:",
+  "alcohol_industry.goggles.juice_press.no_input": "No input",
+  "alcohol_industry.goggles.juice_press.output": "Juice:",
+
+  "alcohol_industry.jei.juice_press": "Juice Press"
 }

@@ -1,0 +1,17 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "fluid": "alcohol_industry:wine",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "alcohol_industry:wine"
+    }
+  ]
+}

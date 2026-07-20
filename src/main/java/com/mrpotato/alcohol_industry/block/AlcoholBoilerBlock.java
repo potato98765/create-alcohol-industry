@@ -88,6 +88,16 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
     }
     
     @Override
+    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state,
+                              @Nullable BlockEntity blockEntity, ItemStack tool) {
+        if (!player.isCreative() && player.hasCorrectToolForDrops(state)) {
+            Block.popResource(level, pos, new ItemStack(this));
+        }
+        // Note: super.playerDestroy handles XP and statistics, but NOT item drops for block entities in Create's IBE
+        // We intentionally skip calling super to avoid duplicate drops from the loot table pipeline.
+    }
+
+    @Override
     public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
         if (!state.is(newState.getBlock())) {
             AlcoholBoilerBlockEntity be = getBlockEntity(level, pos);

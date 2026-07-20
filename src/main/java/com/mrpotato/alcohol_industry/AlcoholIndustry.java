@@ -1,6 +1,8 @@
 package com.mrpotato.alcohol_industry;
 
 import com.mrpotato.alcohol_industry.blockentity.AlcoholBoilerBlockEntity;
+import com.mrpotato.alcohol_industry.blockentity.JuicePressBlockEntity;
+import com.mrpotato.alcohol_industry.blockentity.FermentationBarrelBlockEntity;
 import com.mrpotato.alcohol_industry.registry.*;
 
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +38,8 @@ public class AlcoholIndustry {
 
     private void registerCaps(RegisterCapabilitiesEvent event) {
         AlcoholBoilerBlockEntity.registerCapabilities(event);
+        FermentationBarrelBlockEntity.registerCapabilities(event);
+        JuicePressBlockEntity.registerCapabilities(event);
     }
 
     public static ResourceLocation id(String path) {

@@ -1,0 +1,15 @@
+{
+  "type": "alcohol_industry:alcohol_boiling",
+  "heatRequirement": "heated",
+  "ingredients": [
+    { "item": "minecraft:apple" }
+  ],
+  "fluidIngredient": {
+    "id": "alcohol_industry:fermented_apple_juice",
+    "amount": 1000
+  },
+  "fluidResult": {
+    "id": "alcohol_industry:cider",
+    "amount": 1000
+  }
+}

@@ -45,6 +45,22 @@ public class AlcoholBoilerBlockEntity extends SmartBlockEntity implements IHaveG
                 level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
             }
         }
+
+        @Override
+        public boolean isItemValid(int slot, ItemStack stack) {
+            if (level == null) return true;
+            var recipes = level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.ALCOHOL_BOILING.getType());
+            for (RecipeHolder<?> holder : recipes) {
+                if (holder.value() instanceof AlcoholBoilingRecipe recipe) {
+                    for (net.minecraft.world.item.crafting.Ingredient ingredient : recipe.getIngredients_()) {
+                        if (ingredient.test(stack)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
     };
 
     public ItemStack insertItem(ItemStack stack) {
@@ -169,25 +185,33 @@ public class AlcoholBoilerBlockEntity extends SmartBlockEntity implements IHaveG
         var allRecipes = level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.ALCOHOL_BOILING.getType());
 
         if (allRecipes.isEmpty()) {
-            currentRecipe = null;
+            if (currentRecipe != null) {
+                currentRecipe = null;
+                processingTicks = 0;
+            }
             return;
+        }
+
+        if (currentRecipe != null) {
+            if (currentRecipe.value().matches(items, fluid) && canOutput(currentRecipe.value())) {
+                return;
+            }
         }
 
         for (RecipeHolder<?> holder : allRecipes) {
             if (holder.value() instanceof AlcoholBoilingRecipe recipe) {
-                boolean matches = recipe.matches(items, fluid);
-                boolean canOutput = canOutput(recipe);
-                
-                if (matches && canOutput) {
-                    if (currentRecipe == null) {
-                        currentRecipe = (RecipeHolder<AlcoholBoilingRecipe>) holder;
-                    }
+                if (recipe.matches(items, fluid) && canOutput(recipe)) {
+                    currentRecipe = (RecipeHolder<AlcoholBoilingRecipe>) holder;
+                    processingTicks = 0;
                     return;
                 }
             }
         }
 
-        currentRecipe = null;
+        if (currentRecipe != null) {
+            currentRecipe = null;
+            processingTicks = 0;
+        }
     }
 
     private boolean canOutput(AlcoholBoilingRecipe recipe) {

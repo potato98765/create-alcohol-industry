@@ -18,6 +18,8 @@ public class ModCreativeTabs {
             .icon(() -> new ItemStack(ModItems.ALCOHOL_BOILER_ITEM.get()))
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.ALCOHOL_BOILER_ITEM.get());
+                output.accept(ModItems.FERMENTATION_BARREL_ITEM.get());
+                output.accept(ModItems.JUICE_PRESS_ITEM.get());
                 
                 output.accept(ModItems.GLASS_TUBE.get());
                 output.accept(ModItems.TEMPERATURE_CONTROLLER.get());
@@ -27,11 +29,21 @@ public class ModCreativeTabs {
                 output.accept(ModItems.VODKA_BUCKET.get());
                 output.accept(ModItems.WHISKEY_BUCKET.get());
                 output.accept(ModItems.TEQUILA_BUCKET.get());
+                output.accept(ModItems.APPLE_JUICE_BUCKET.get());
+                output.accept(ModItems.FERMENTED_APPLE_JUICE_BUCKET.get());
+                output.accept(ModItems.RUM_BUCKET.get());
+                output.accept(ModItems.CIDER_BUCKET.get());
+
+                output.accept(ModItems.APPLE_WINE_BUCKET.get());
 
                 output.accept(ModItems.BEER_BOTTLE.get());
                 output.accept(ModItems.VODKA_BOTTLE.get());
                 output.accept(ModItems.WHISKEY_BOTTLE.get());
                 output.accept(ModItems.TEQUILA_BOTTLE.get());
+                output.accept(ModItems.RUM_BOTTLE.get());
+                output.accept(ModItems.CIDER_BOTTLE.get());
+
+                output.accept(ModItems.APPLE_WINE_BOTTLE.get());
             })
             .build());
 }

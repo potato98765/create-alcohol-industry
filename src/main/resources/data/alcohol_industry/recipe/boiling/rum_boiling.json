@@ -1,0 +1,15 @@
+{
+  "type": "alcohol_industry:alcohol_boiling",
+  "heatRequirement": "heated",
+  "ingredients": [
+    { "item": "minecraft:sugar_cane" }
+  ],
+  "fluidIngredient": {
+    "id": "alcohol_industry:alcohol_base_fluid",
+    "amount": 1000
+  },
+  "fluidResult": {
+    "id": "alcohol_industry:rum",
+    "amount": 1000
+  }
+}

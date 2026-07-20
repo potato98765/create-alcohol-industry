@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top":    "alcohol_industry:block/juice_press_top",
+    "bottom": "alcohol_industry:block/juice_press_bottom",
+    "front":  "alcohol_industry:block/juice_press_front",
+    "side":   "alcohol_industry:block/juice_press_side"
+  }
+}

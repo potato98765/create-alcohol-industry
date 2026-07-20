@@ -51,4 +51,45 @@ public class ModFluids {
     public static final BaseFlowingFluid.Properties TEQUILA_PROPERTIES = new BaseFlowingFluid.Properties(
             ModFluidTypes.TEQUILA_TYPE, TEQUILA_SOURCE, TEQUILA_FLOWING)
             .bucket(ModItems.TEQUILA_BUCKET).block(ModBlocks.TEQUILA_BLOCK);
+
+    public static final DeferredHolder<Fluid, FlowingFluid> APPLE_JUICE_SOURCE = 
+        FLUIDS.register("apple_juice", () -> new BaseFlowingFluid.Source(ModFluids.APPLE_JUICE_PROPERTIES));
+    public static final DeferredHolder<Fluid, FlowingFluid> APPLE_JUICE_FLOWING = 
+        FLUIDS.register("apple_juice_flowing", () -> new BaseFlowingFluid.Flowing(ModFluids.APPLE_JUICE_PROPERTIES));
+    public static final BaseFlowingFluid.Properties APPLE_JUICE_PROPERTIES = new BaseFlowingFluid.Properties(
+            ModFluidTypes.APPLE_JUICE_TYPE, APPLE_JUICE_SOURCE, APPLE_JUICE_FLOWING)
+            .bucket(ModItems.APPLE_JUICE_BUCKET).block(ModBlocks.APPLE_JUICE_BLOCK);
+
+    public static final DeferredHolder<Fluid, FlowingFluid> FERMENTED_APPLE_JUICE_SOURCE = 
+        FLUIDS.register("fermented_apple_juice", () -> new BaseFlowingFluid.Source(ModFluids.FERMENTED_APPLE_JUICE_PROPERTIES));
+    public static final DeferredHolder<Fluid, FlowingFluid> FERMENTED_APPLE_JUICE_FLOWING = 
+        FLUIDS.register("fermented_apple_juice_flowing", () -> new BaseFlowingFluid.Flowing(ModFluids.FERMENTED_APPLE_JUICE_PROPERTIES));
+    public static final BaseFlowingFluid.Properties FERMENTED_APPLE_JUICE_PROPERTIES = new BaseFlowingFluid.Properties(
+            ModFluidTypes.FERMENTED_APPLE_JUICE_TYPE, FERMENTED_APPLE_JUICE_SOURCE, FERMENTED_APPLE_JUICE_FLOWING)
+            .bucket(ModItems.FERMENTED_APPLE_JUICE_BUCKET).block(ModBlocks.FERMENTED_APPLE_JUICE_BLOCK);
+
+    public static final DeferredHolder<Fluid, FlowingFluid> RUM_SOURCE = 
+        FLUIDS.register("rum", () -> new BaseFlowingFluid.Source(ModFluids.RUM_PROPERTIES));
+    public static final DeferredHolder<Fluid, FlowingFluid> RUM_FLOWING = 
+        FLUIDS.register("rum_flowing", () -> new BaseFlowingFluid.Flowing(ModFluids.RUM_PROPERTIES));
+    public static final BaseFlowingFluid.Properties RUM_PROPERTIES = new BaseFlowingFluid.Properties(
+            ModFluidTypes.RUM_TYPE, RUM_SOURCE, RUM_FLOWING)
+            .bucket(ModItems.RUM_BUCKET).block(ModBlocks.RUM_BLOCK);
+
+
+    public static final DeferredHolder<Fluid, FlowingFluid> CIDER_SOURCE = 
+        FLUIDS.register("cider", () -> new BaseFlowingFluid.Source(ModFluids.CIDER_PROPERTIES));
+    public static final DeferredHolder<Fluid, FlowingFluid> CIDER_FLOWING = 
+        FLUIDS.register("cider_flowing", () -> new BaseFlowingFluid.Flowing(ModFluids.CIDER_PROPERTIES));
+    public static final BaseFlowingFluid.Properties CIDER_PROPERTIES = new BaseFlowingFluid.Properties(
+            ModFluidTypes.CIDER_TYPE, CIDER_SOURCE, CIDER_FLOWING)
+            .bucket(ModItems.CIDER_BUCKET).block(ModBlocks.CIDER_BLOCK);
+
+    public static final DeferredHolder<Fluid, FlowingFluid> APPLE_WINE_SOURCE =
+        FLUIDS.register("apple_wine", () -> new BaseFlowingFluid.Source(ModFluids.APPLE_WINE_PROPERTIES));
+    public static final DeferredHolder<Fluid, FlowingFluid> APPLE_WINE_FLOWING =
+        FLUIDS.register("apple_wine_flowing", () -> new BaseFlowingFluid.Flowing(ModFluids.APPLE_WINE_PROPERTIES));
+    public static final BaseFlowingFluid.Properties APPLE_WINE_PROPERTIES = new BaseFlowingFluid.Properties(
+            ModFluidTypes.APPLE_WINE_TYPE, APPLE_WINE_SOURCE, APPLE_WINE_FLOWING)
+            .bucket(ModItems.APPLE_WINE_BUCKET).block(ModBlocks.APPLE_WINE_BLOCK);
 }

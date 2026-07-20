@@ -39,7 +39,7 @@ public class AlcoholBoilingRecipe implements Recipe<RecipeInput> {
     @SuppressWarnings("deprecation")
     public boolean matches(List<ItemStack> items, FluidStack fluid) {
         if (!fluidIngredient.isEmpty()) {
-            if (fluid.isEmpty() || !FluidStack.matches(fluid, fluidIngredient) || 
+            if (fluid.isEmpty() || fluid.getFluid() != fluidIngredient.getFluid() || 
                 fluid.getAmount() < fluidIngredient.getAmount()) {
                 return false;
             }

@@ -12,7 +12,6 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 
 import java.util.List;
@@ -28,21 +27,25 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(
-            new AlcoholBoilingCategory(registration.getJeiHelpers().getGuiHelper())
+            new AlcoholBoilingCategory(registration.getJeiHelpers().getGuiHelper()),
+            new FermentationCategory(registration.getJeiHelpers().getGuiHelper())
         );
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
-        
+
+        // Boiler recipes (data-driven)
         List<AlcoholBoilingRecipe> boilingRecipes = recipeManager
             .getAllRecipesFor(ModRecipeTypes.ALCOHOL_BOILING.getType())
             .stream()
             .map(holder -> (AlcoholBoilingRecipe) holder.value())
             .toList();
-        
         registration.addRecipes(AlcoholBoilingCategory.RECIPE_TYPE, boilingRecipes);
+
+        // Fermentation recipes (static, time-based)
+        registration.addRecipes(FermentationCategory.RECIPE_TYPE, FermentationCategory.ALL_RECIPES);
     }
 
     @Override
@@ -50,6 +53,10 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
         registration.addRecipeCatalyst(
             new ItemStack(ModItems.ALCOHOL_BOILER_ITEM.get()),
             AlcoholBoilingCategory.RECIPE_TYPE
+        );
+        registration.addRecipeCatalyst(
+            new ItemStack(ModItems.FERMENTATION_BARREL_ITEM.get()),
+            FermentationCategory.RECIPE_TYPE
         );
     }
 }

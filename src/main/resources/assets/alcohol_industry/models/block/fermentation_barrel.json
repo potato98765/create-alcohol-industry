@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top":    "alcohol_industry:block/fermentation_barrel_top",
+    "bottom": "alcohol_industry:block/fermentation_barrel_bottom",
+    "front":  "alcohol_industry:block/fermentation_barrel_front",
+    "side":   "alcohol_industry:block/fermentation_barrel_side"
+  }
+}
