@@ -1,37 +1,37 @@
 modLoader="javafml"
-loaderVersion="[4,)"
-license="Custom Licence"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 
 [[mods]]
-modId="alcohol_industry"
-version="2.2.1"
-displayName="Create: Alcohol Industry"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 authors="MrPotato"
 description=""
 logoFile="logo.png"
 
-[[dependencies."alcohol_industry"]]
+[[dependencies."${mod_id}"]]
     modId="neoforge"
     type="required"
     versionRange="(21,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies."alcohol_industry"]]
+[[dependencies."${mod_id}"]]
     modId="minecraft"
     type="required"
-    versionRange="1.21.1"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies."alcohol_industry"]]
+[[dependencies."${mod_id}"]]
     modId="create"
     type="required"
     versionRange="[6.0.9,6.1.0)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies."alcohol_industry"]]
+[[dependencies."${mod_id}"]]
     modId="jei"
     type="optional"
     versionRange="[19.0.0,)"

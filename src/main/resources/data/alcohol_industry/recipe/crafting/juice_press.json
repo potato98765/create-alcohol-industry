@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "PPP",
-    "PFP",
-    "PPP"
+    "#1#",
+    "#2#",
+    "###"
   ],
   "key": {
-    "P": {
+    "#": {
       "tag": "minecraft:planks"
     },
-    "F": {
+    "1": {
+      "item": "create:mechanical_press"
+    },
+    "2": {
       "item": "create:fluid_tank"
     }
   },
   "result": {
-    "id": "alcohol_industry:fermentation_barrel",
+    "id": "alcohol_industry:juice_press",
     "count": 1
   }
 }

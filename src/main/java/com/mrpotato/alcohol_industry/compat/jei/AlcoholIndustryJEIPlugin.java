@@ -28,7 +28,8 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(
             new AlcoholBoilingCategory(registration.getJeiHelpers().getGuiHelper()),
-            new FermentationCategory(registration.getJeiHelpers().getGuiHelper())
+            new FermentationCategory(registration.getJeiHelpers().getGuiHelper()),
+            new JuicePressCategory(registration.getJeiHelpers().getGuiHelper())
         );
     }
 
@@ -46,6 +47,9 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
 
         // Fermentation recipes (static, time-based)
         registration.addRecipes(FermentationCategory.RECIPE_TYPE, FermentationCategory.ALL_RECIPES);
+
+        // Juice Press recipes (static, item-to-fluid)
+        registration.addRecipes(JuicePressCategory.RECIPE_TYPE, JuicePressCategory.ALL_RECIPES);
     }
 
     @Override
@@ -57,6 +61,10 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
         registration.addRecipeCatalyst(
             new ItemStack(ModItems.FERMENTATION_BARREL_ITEM.get()),
             FermentationCategory.RECIPE_TYPE
+        );
+        registration.addRecipeCatalyst(
+            new ItemStack(ModItems.JUICE_PRESS_ITEM.get()),
+            JuicePressCategory.RECIPE_TYPE
         );
     }
 }
