@@ -2,61 +2,17 @@
 
 With the mod Create: Alcohol Industry you get the ability to make various beverages.
 
-Including: Beer, Vodka, Whiskey and Tequila.
+Including: Beer, Vodka, Whiskey, Tequila, Rum, Cider and Wine.
 
-The mod also introduces a new block called the Alcohol Boiler that can be used to turn the Alcohol Base into the specific type of beverage.
+The mod also introduces a new block called the Alcohol Boiler that can be used to turn the Alcohol Base into the specific type of beverage. You also have the Fermentation Barrel and the Juice Press used in making Wine.
 
 
-All the beverages are drinkable too! That will give you effects (not made yet).
+All the beverages are drinkable too! That will give you effects.
 
 
 ## Recipes
 
 Avalibe with any recipe viewer mod like JEI or you can browse the wiki (wiki not made yet).
-
-Also for the time that the wiki does not exists here are the recipes for the Alcohol Boiler and recipes will probably change in the future.
-
-
-<details>
-<summary>Recipes</summary>
-
-**Beer:**
-
-1000mB of Alcohol Base
-
-1x Wheat Flour
-
-1x Wheat Seeds
-
-
-**Vodka:**
-
-1000mB of Alcohol Base
-
-1x Potato
-
-1x Sugar
-
-
-**Whiskey:**
-
-1000mB of Alcohol Base
-
-1x Wheat Flour
-
-1x Sugar
-
-
-**Tequila:**
-
-1x Sugar Cane
-
-1x Sugar
-
-</details>
-
-
-
 
 
 
