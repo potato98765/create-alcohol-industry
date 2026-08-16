@@ -7,8 +7,8 @@
   ],
   "results": [
     {
-      "fluid": "alcohol_industry:apple_juice",
-      "amount": 250
+      "amount": 250,
+      "id": "alcohol_industry:apple_juice"
     }
   ]
 }

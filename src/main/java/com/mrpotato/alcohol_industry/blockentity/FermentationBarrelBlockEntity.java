@@ -21,9 +21,7 @@ import java.util.List;
 
 public class FermentationBarrelBlockEntity extends SmartBlockEntity implements IHaveGoggleInformation {
 
-    /** Stage 1: Apple Juice -> Fermented Apple Juice (~2 min at 20 tps) */
     public static final int STAGE1_TICKS = 2400;
-    /** Stage 2: Fermented Apple Juice -> Apple Wine (~5 min at 20 tps) */
     public static final int STAGE2_TICKS = 6000;
 
     private final FluidTank tank = new FluidTank(4000) {
@@ -57,7 +55,6 @@ public class FermentationBarrelBlockEntity extends SmartBlockEntity implements I
 
         FluidStack fluid = tank.getFluid();
 
-        // Stage 1: Apple Juice -> Fermented Apple Juice
         if (!fluid.isEmpty() && fluid.getFluid() == ModFluids.APPLE_JUICE_SOURCE.get() && fluid.getAmount() >= 100) {
             processingTicks++;
             if (processingTicks % 20 == 0) {
@@ -70,8 +67,6 @@ public class FermentationBarrelBlockEntity extends SmartBlockEntity implements I
                 setChanged();
                 level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), Block.UPDATE_ALL);
             }
-
-        // Stage 2: Fermented Apple Juice -> Apple Wine
         } else if (!fluid.isEmpty() && fluid.getFluid() == ModFluids.FERMENTED_APPLE_JUICE_SOURCE.get() && fluid.getAmount() >= 100) {
             processingTicks++;
             if (processingTicks % 20 == 0) {

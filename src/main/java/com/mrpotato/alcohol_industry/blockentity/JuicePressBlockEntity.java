@@ -25,11 +25,8 @@ import java.util.List;
 
 public class JuicePressBlockEntity extends SmartBlockEntity implements IHaveGoggleInformation {
 
-    /** mB of juice produced per item */
     public static final int JUICE_PER_ITEM = 250;
-    /** Ticks per item (~1 second per item) */
     public static final int TICKS_PER_ITEM = 20;
-    /** Max capacity of the output fluid tank (16 buckets = 16000 mB) */
     private static final int TANK_CAPACITY = 16000;
 
     private int processingTicks = 0;
@@ -80,7 +77,6 @@ public class JuicePressBlockEntity extends SmartBlockEntity implements IHaveGogg
         return outputTank;
     }
 
-    /** Called by the block's useItemOn to insert apples */
     public ItemStack insertApples(ItemStack stack) {
         stack = inventory.insertItem(0, stack, false);
         setChanged();
@@ -99,11 +95,9 @@ public class JuicePressBlockEntity extends SmartBlockEntity implements IHaveGogg
             return;
         }
 
-        // Check if there's room for at least one portion of juice
         FluidStack juice = new FluidStack(ModFluids.APPLE_JUICE_SOURCE.get(), JUICE_PER_ITEM);
         int filled = outputTank.fill(juice, net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction.SIMULATE);
         if (filled < JUICE_PER_ITEM) {
-            // Output full — pause
             if (processingTicks != 0) {
                 processingTicks = 0;
                 setChanged();
@@ -113,7 +107,6 @@ public class JuicePressBlockEntity extends SmartBlockEntity implements IHaveGogg
 
         processingTicks++;
         if (processingTicks >= TICKS_PER_ITEM) {
-            // Consume one apple, produce juice
             apples.shrink(1);
             inventory.setStackInSlot(0, apples);
             outputTank.fill(juice, net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction.EXECUTE);

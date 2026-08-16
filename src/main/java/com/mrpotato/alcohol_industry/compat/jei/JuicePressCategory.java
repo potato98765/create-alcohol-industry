@@ -82,11 +82,9 @@ public class JuicePressCategory implements IRecipeCategory<JuicePressCategory.Ju
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, JuicePressRecipe recipe, IFocusGroup focuses) {
-        // Input item on the left
         builder.addSlot(RecipeIngredientRole.INPUT, 20, 16)
             .addItemStack(recipe.input());
 
-        // Output fluid on the right
         builder.addSlot(RecipeIngredientRole.OUTPUT, 120, 4)
             .addFluidStack(recipe.output().getFluid(), recipe.output().getAmount())
             .setFluidRenderer(recipe.output().getAmount(), false, 16, 50);
@@ -96,15 +94,12 @@ public class JuicePressCategory implements IRecipeCategory<JuicePressCategory.Ju
     public void draw(JuicePressRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         Font font = Minecraft.getInstance().font;
 
-        // Arrow in the middle
         guiGraphics.drawString(font, "→", 68, 20, 0xFF555555, false);
 
-        // Time label
         String timeLabel = "⏱ " + recipe.timeText();
         int textWidth = font.width(timeLabel);
         guiGraphics.drawString(font, timeLabel, (160 - textWidth) / 2, 44, 0xFF666666, false);
 
-        // mB label under output fluid slot
         guiGraphics.drawString(font, recipe.output().getAmount() + "mB", 118, 56, 0xFF888888, false);
     }
 }

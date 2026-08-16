@@ -36,6 +36,7 @@ public class ModCreativeTabs {
 
                 output.accept(ModItems.APPLE_WINE_BUCKET.get());
 
+                output.accept(ModItems.ALCOHOL_BASE_BOTTLE.get());
                 output.accept(ModItems.BEER_BOTTLE.get());
                 output.accept(ModItems.VODKA_BOTTLE.get());
                 output.accept(ModItems.WHISKEY_BOTTLE.get());

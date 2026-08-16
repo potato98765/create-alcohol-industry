@@ -8,6 +8,7 @@
   
   "fluid_type.alcohol_industry.alcohol_base_fluid": "Alcohol Base",
   "item.alcohol_industry.alcohol_base_bucket": "Alcohol Base Bucket",
+  "item.alcohol_industry.alcohol_base": "Bottle of Alcohol Base",
   "block.alcohol_industry.alcohol_base_fluid_block": "Alcohol Base",
 
   "fluid_type.alcohol_industry.beer": "Beer",

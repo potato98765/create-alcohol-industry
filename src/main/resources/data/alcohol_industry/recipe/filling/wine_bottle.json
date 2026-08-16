@@ -5,14 +5,14 @@
       "item": "minecraft:glass_bottle"
     },
     {
-      "fluid": "alcohol_industry:wine",
+      "fluid": "alcohol_industry:apple_wine",
       "amount": 250,
       "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "id": "alcohol_industry:wine"
+      "id": "alcohol_industry:apple_wine"
     }
   ]
 }

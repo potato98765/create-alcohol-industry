@@ -127,11 +127,11 @@ public class AlcoholBoilerBlockEntity extends SmartBlockEntity implements IHaveG
     }
 
     public boolean isProcessing() {
-        return currentRecipe != null && processingTicks > 0;
+        return processingTicks > 0;
     }
 
     public float getProcessingProgress() {
-        if (currentRecipe == null || MAX_TICKS == 0) return 0f;
+        if (MAX_TICKS == 0) return 0f;
         return (float) processingTicks / MAX_TICKS;
     }
 

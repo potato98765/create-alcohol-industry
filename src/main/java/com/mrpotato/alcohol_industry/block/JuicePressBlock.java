@@ -55,13 +55,11 @@ public class JuicePressBlock extends Block implements IBE<JuicePressBlockEntity>
 
         BlockEntity be = level.getBlockEntity(pos);
         if (be instanceof JuicePressBlockEntity press) {
-            // Try fluid extraction first (bucket etc.)
             var fluidHandler = level.getCapability(Capabilities.FluidHandler.BLOCK, pos, hitResult.getDirection());
             if (fluidHandler != null && FluidUtil.interactWithFluidHandler(player, hand, fluidHandler)) {
                 return ItemInteractionResult.SUCCESS;
             }
 
-            // Insert fruit items
             if (stack.is(Items.APPLE)) {
                 ItemStack remainder = press.insertApples(stack.copy());
                 if (remainder.getCount() < stack.getCount()) {
@@ -82,8 +80,6 @@ public class JuicePressBlock extends Block implements IBE<JuicePressBlockEntity>
         if (!player.isCreative() && player.hasCorrectToolForDrops(state)) {
             Block.popResource(level, pos, new ItemStack(this));
         }
-        // Intentionally NOT calling super — Create's IBE routes through loot tables
-        // which would cause duplicate or missing drops for SmartBlockEntity blocks.
     }
 
     @Override

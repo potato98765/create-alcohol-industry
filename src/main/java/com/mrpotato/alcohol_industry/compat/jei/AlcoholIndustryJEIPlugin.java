@@ -37,7 +37,6 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
-        // Boiler recipes (data-driven)
         List<AlcoholBoilingRecipe> boilingRecipes = recipeManager
             .getAllRecipesFor(ModRecipeTypes.ALCOHOL_BOILING.getType())
             .stream()
@@ -45,10 +44,8 @@ public class AlcoholIndustryJEIPlugin implements IModPlugin {
             .toList();
         registration.addRecipes(AlcoholBoilingCategory.RECIPE_TYPE, boilingRecipes);
 
-        // Fermentation recipes (static, time-based)
         registration.addRecipes(FermentationCategory.RECIPE_TYPE, FermentationCategory.ALL_RECIPES);
 
-        // Juice Press recipes (static, item-to-fluid)
         registration.addRecipes(JuicePressCategory.RECIPE_TYPE, JuicePressCategory.ALL_RECIPES);
     }
 

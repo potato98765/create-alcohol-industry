@@ -6,12 +6,13 @@
     },
     {
       "fluid": "alcohol_industry:alcohol_base_fluid",
-      "amount": 100
+      "amount": 250,
+      "type": "neoforge:single"
     }
   ],
   "results": [
     {
-      "item": "alcohol_industry:alcohol_base"
+      "id": "alcohol_industry:alcohol_base"
     }
   ]
 }

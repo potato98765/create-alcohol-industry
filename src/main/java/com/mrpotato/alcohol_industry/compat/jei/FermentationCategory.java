@@ -22,16 +22,11 @@ import net.neoforged.neoforge.fluids.FluidStack;
 
 import java.util.List;
 
-/**
- * Represents a single fermentation stage displayed in JEI.
- * Since fermentation is time-based (not a data-driven recipe), we use a plain record.
- */
 public class FermentationCategory implements IRecipeCategory<FermentationCategory.FermentationRecipe> {
 
     public static final RecipeType<FermentationRecipe> RECIPE_TYPE =
         RecipeType.create(AlcoholIndustry.MOD_ID, "fermentation", FermentationRecipe.class);
 
-    /** A simple holder for one fermentation stage shown in JEI. */
     public record FermentationRecipe(FluidStack input, FluidStack output, int ticks) {
         public String timeText() {
             int seconds = ticks / 20;
@@ -42,7 +37,6 @@ public class FermentationCategory implements IRecipeCategory<FermentationCategor
         }
     }
 
-    /** All stages registered for display. */
     public static final List<FermentationRecipe> ALL_RECIPES = List.of(
         new FermentationRecipe(
             new FluidStack(ModFluids.APPLE_JUICE_SOURCE.get(), 1000),
@@ -92,12 +86,10 @@ public class FermentationCategory implements IRecipeCategory<FermentationCategor
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, FermentationRecipe recipe, IFocusGroup focuses) {
-        // Input fluid on the left
         builder.addSlot(RecipeIngredientRole.INPUT, 4, 4)
             .addFluidStack(recipe.input().getFluid(), recipe.input().getAmount())
             .setFluidRenderer(recipe.input().getAmount(), false, 16, 50);
 
-        // Output fluid on the right
         builder.addSlot(RecipeIngredientRole.OUTPUT, 130, 4)
             .addFluidStack(recipe.output().getFluid(), recipe.output().getAmount())
             .setFluidRenderer(recipe.output().getAmount(), false, 16, 50);
@@ -107,15 +99,12 @@ public class FermentationCategory implements IRecipeCategory<FermentationCategor
     public void draw(FermentationRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         Font font = Minecraft.getInstance().font;
 
-        // Arrow in the middle
         guiGraphics.drawString(font, "→", 72, 20, 0xFF555555, false);
 
-        // Time label
         String timeLabel = "⏱ " + recipe.timeText();
         int textWidth = font.width(timeLabel);
         guiGraphics.drawString(font, timeLabel, (160 - textWidth) / 2, 46, 0xFF666666, false);
 
-        // mB labels under each fluid slot
         guiGraphics.drawString(font, recipe.input().getAmount() + "mB", 2, 56, 0xFF888888, false);
         guiGraphics.drawString(font, recipe.output().getAmount() + "mB", 128, 56, 0xFF888888, false);
     }

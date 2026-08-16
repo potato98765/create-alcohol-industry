@@ -33,20 +33,20 @@ public class ModFluidTypes {
 
     public static final DeferredHolder<FluidType, GenericAlcoholFluidType> APPLE_JUICE_TYPE = 
         FLUID_TYPES.register("apple_juice", 
-            () -> new GenericAlcoholFluidType("apple_juice", 0xFFE4C988, 1020, 1500, 298, "alcohol_base"));
+            () -> new GenericAlcoholFluidType("apple_juice", 0xFFE4C988, 1020, 1500, 298));
 
     public static final DeferredHolder<FluidType, GenericAlcoholFluidType> FERMENTED_APPLE_JUICE_TYPE = 
         FLUID_TYPES.register("fermented_apple_juice", 
-            () -> new GenericAlcoholFluidType("fermented_apple_juice", 0xFFD8C280, 1015, 1450, 298, "alcohol_base"));
+            () -> new GenericAlcoholFluidType("fermented_apple_juice", 0xFFD8C280, 1015, 1450, 298));
 
     public static final DeferredHolder<FluidType, GenericAlcoholFluidType> RUM_TYPE = 
         FLUID_TYPES.register("rum", 
-            () -> new GenericAlcoholFluidType("rum", 0xFF6A3B16, 960, 1300, 295, "alcohol_base"));
+            () -> new GenericAlcoholFluidType("rum", 0xFF6A3B16, 960, 1300, 295));
 
 
     public static final DeferredHolder<FluidType, GenericAlcoholFluidType> CIDER_TYPE = 
         FLUID_TYPES.register("cider", 
-            () -> new GenericAlcoholFluidType("cider", 0xFFD49B3C, 1005, 1100, 298, "alcohol_base"));
+            () -> new GenericAlcoholFluidType("cider", 0xFFD49B3C, 1005, 1100, 298));
 
     public static final DeferredHolder<FluidType, GenericAlcoholFluidType> APPLE_WINE_TYPE =
         FLUID_TYPES.register("apple_wine",

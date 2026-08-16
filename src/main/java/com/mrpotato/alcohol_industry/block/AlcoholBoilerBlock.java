@@ -31,6 +31,8 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.FluidUtil;
 import org.jetbrains.annotations.Nullable;
 
 public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockEntity>, IWrenchable, EntityBlock {
@@ -73,6 +75,11 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
         
         AlcoholBoilerBlockEntity be = getBlockEntity(level, pos);
         if (be != null) {
+            var fluidHandler = level.getCapability(Capabilities.FluidHandler.BLOCK, pos, hitResult.getDirection());
+            if (fluidHandler != null && FluidUtil.interactWithFluidHandler(player, hand, fluidHandler)) {
+                return ItemInteractionResult.SUCCESS;
+            }
+
             if (!stack.isEmpty()) {
                 ItemStack remainder = be.insertItem(stack.copy());
                 if (remainder.getCount() < stack.getCount()) {
@@ -93,8 +100,6 @@ public class AlcoholBoilerBlock extends Block implements IBE<AlcoholBoilerBlockE
         if (!player.isCreative() && player.hasCorrectToolForDrops(state)) {
             Block.popResource(level, pos, new ItemStack(this));
         }
-        // Note: super.playerDestroy handles XP and statistics, but NOT item drops for block entities in Create's IBE
-        // We intentionally skip calling super to avoid duplicate drops from the loot table pipeline.
     }
 
     @Override

@@ -60,7 +60,12 @@ public class ModItems {
     public static final DeferredHolder<Item, BucketItem> APPLE_WINE_BUCKET =
         ITEMS.register("apple_wine_bucket", () -> new BucketItem(ModFluids.APPLE_WINE_SOURCE.get(), bucketProps()));
 
-    
+    public static final DeferredHolder<Item, AlcoholBottleItem> ALCOHOL_BASE_BOTTLE =
+        ITEMS.register("alcohol_base", () -> new AlcoholBottleItem(bottleProps(), () -> List.of(
+            new MobEffectInstance(MobEffects.CONFUSION, 200, 0),
+            new MobEffectInstance(MobEffects.POISON, 100, 0)
+        )));
+
     public static final DeferredHolder<Item, AlcoholBottleItem> BEER_BOTTLE =
         ITEMS.register("beer", () -> new AlcoholBottleItem(bottleProps(), () -> List.of(
             new MobEffectInstance(MobEffects.CONFUSION, 200, 0),
